@@ -25,6 +25,11 @@ spec:
           env:
             - name: ENVIRONMENT
               value: {{ .Values.envvars.env }}
+            - name: PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: secret-password
+                  key: password
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
             - name: http

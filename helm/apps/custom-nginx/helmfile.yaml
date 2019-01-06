@@ -9,7 +9,7 @@ releases:
   values:
 #    - ./default/values.yaml  # load default values
     - ./environments/{{ .Environment.Name }}/values.yaml
-
+    - ./environments/{{ .Environment.Name }}/secrets.yaml.dec
 
   #  set:
   #  - name: rbac.create
