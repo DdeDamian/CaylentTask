@@ -32,6 +32,18 @@ Get service url
 Secrets
   helm plugin install https://github.com/futuresimple/helm-secrets
 
+  create gpg
+    mv ~/.gnupg ~/.gnupg-backup
+    mkdir -p ~/.gnupg/private-keys-v1.d
+    chmod 700 ~/.gnupg/private-keys-v1.d
+    gpg --full-generate-key
+
+    gpg --export-secret-keys --armor enviaaca@gmail.com > enviaaca-privkey.asc
+    agregar en el archivo .sops.yaml la key que se obtine con gpg --import <nombre de la key> i.e. enviaaca-privkey.asc
+
+    unencrypt
+      helm secrets {enc, dec, view, edit}} stage/secrets.yaml
+
 helmfile
   https://github.com/roboll/helmfile
 
