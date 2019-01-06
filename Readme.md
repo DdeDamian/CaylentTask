@@ -31,6 +31,7 @@ Get service url
 
 Secrets
   helm plugin install https://github.com/futuresimple/helm-secrets
+  https://developer.epages.com/blog/tech-stories/kubernetes-deployments-with-helm-secrets/
 
   create gpg
     mv ~/.gnupg ~/.gnupg-backup
