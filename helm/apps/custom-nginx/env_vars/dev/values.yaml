@@ -1,0 +1,32 @@
+replicaCount: 1
+
+image:
+  repository: ddedamian/custom-nginx
+  tag: latest
+  pullPolicy: IfNotPresent
+
+envvars:
+  env: dev
+
+nameOverride: "custom-nginx-caylent-dev"
+fullnameOverride: ""
+
+service:
+  type: ClusterIP
+  port: 80
+
+ingress:
+  enabled: false
+  annotations: {}
+  paths: []
+  hosts:
+    - chart-example.dev
+  tls: []
+
+resources: {}
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}

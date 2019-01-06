@@ -7,10 +7,5 @@ releases:
   namespace: caylent
   chart: ./charts/custom-nginx-caylent
   values:
-#    - ./default/values.yaml  # load default values
-    - ./environments/{{ .Environment.Name }}/values.yaml
-    - ./environments/{{ .Environment.Name }}/secrets.yaml.dec
-
-  #  set:
-  #  - name: rbac.create
-  #    value: false
+    - ./env_vars/{{ .Environment.Name }}/values.yaml
+    - ./env_vars/{{ .Environment.Name }}/secrets.yaml.dec
