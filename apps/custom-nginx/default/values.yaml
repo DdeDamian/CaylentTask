@@ -9,6 +9,9 @@ image:
   tag: latest
   pullPolicy: IfNotPresent
 
+envvars:
+  env: default
+
 nameOverride: ""
 fullnameOverride: ""
 

@@ -6,8 +6,11 @@ replicaCount: 1
 
 image:
   repository: ddedamian/custom-nginx
-  tag: v0.3
+  tag: v0.11
   pullPolicy: IfNotPresent
+
+envvars:
+  env: stage
 
 nameOverride: "custom-nginx-caylent-stage"
 fullnameOverride: ""
