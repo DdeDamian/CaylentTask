@@ -12,7 +12,7 @@ nameOverride: "caylent-stage"
 fullnameOverride: "caylent-stage"
 
 service:
-  type: ClusterIP
+  type: LoadBalancer
   port: 80
 
 ingress:
