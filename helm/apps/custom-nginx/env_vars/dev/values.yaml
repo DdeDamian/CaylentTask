@@ -14,19 +14,3 @@ fullnameOverride: "caylent-dev"
 service:
   type: ClusterIP
   port: 80
-
-ingress:
-  enabled: false
-  annotations: {}
-  paths: []
-  hosts:
-    - chart-example.dev
-  tls: []
-
-resources: {}
-
-nodeSelector: {}
-
-tolerations: []
-
-affinity: {}

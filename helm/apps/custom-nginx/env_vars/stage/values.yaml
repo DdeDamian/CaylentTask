@@ -14,19 +14,3 @@ fullnameOverride: "caylent-stage"
 service:
   type: LoadBalancer
   port: 80
-
-ingress:
-  enabled: false
-  annotations: {}
-  paths: []
-  hosts:
-    - chart-example.stage
-  tls: []
-
-resources: {}
-
-nodeSelector: {}
-
-tolerations: []
-
-affinity: {}

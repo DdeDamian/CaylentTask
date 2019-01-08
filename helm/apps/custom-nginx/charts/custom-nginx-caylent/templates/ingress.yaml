@@ -13,7 +13,7 @@ spec:
   rules:
   - http:
       paths:
-      - path: /meow
+      - path: /
         backend:
           serviceName: {{ include "mychart.fullname" . }}-svc
           servicePort: {{ .Values.service.port }}
