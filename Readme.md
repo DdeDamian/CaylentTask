@@ -69,3 +69,11 @@ Publish docker image
   docker login #user password
   docker tag custom-nginx ddedamian/<Image>:<version>
   docker push ddedamian/<Image>:<version>
+
+
+
+
+Entrar a un pod
+
+  kubectl get pods --namespace=caylent  
+  kubectl exec -it <pod> --namespace=caylent  -- /bin/sh
