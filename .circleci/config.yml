@@ -27,7 +27,7 @@ jobs:
   #     - run: <command>
 workflows:
   version: 2
-  build-image:
+  build_and_test:
     jobs:
-      - build
+      - build-image
       # - test
