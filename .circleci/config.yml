@@ -1,8 +1,10 @@
 version: 2
 jobs:
-  build:
+  build-image:
     docker:
-      - image: ubuntu:18.04
+      #- image: ubuntu:18.04
+      - image: docker:stable-dind
+
         environment:
           TEST_VAR: test
     steps:
@@ -10,8 +12,11 @@ jobs:
       - run:
           name: Update packages
           command: |
-            apt update
-            apt upgrade -y
+            pwd
+            ls
+          # name: Install dependencies
+          # command: |
+          #   pwd
 
 
   # test:
