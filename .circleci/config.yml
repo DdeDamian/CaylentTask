@@ -14,18 +14,6 @@ jobs:
             apt upgrade -y
 
 
-version: 2
-jobs:
-  build:
-    docker:
-      - image: ubuntu:18.04
-    steps:
-      - checkout
-      - run:
-          name: Update packages
-          command: |
-            apt update
-            apt upgrade -y
   # test:
   #   docker:
   #     - image: circleci/<language>:<version TAG>
@@ -33,6 +21,7 @@ jobs:
   #     - checkout
   #     - run: <command>
 workflows:
+  version: 2
   build_and_test:
     jobs:
       - build
