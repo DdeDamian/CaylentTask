@@ -1,17 +1,17 @@
 replicaCount: 2
 
 image:
-  # repository: nginxdemos/hello
   repository: ddedamian/custom-nginx
   tag: v2.0.0
   pullPolicy: IfNotPresent
 
 envvars:
-  env: development
+  env: dev
 
 nameOverride: "caylent-dev"
 fullnameOverride: "caylent-dev"
 
 service:
   type: ClusterIP
-  port: 80
+  port: 8081
+  path: dev

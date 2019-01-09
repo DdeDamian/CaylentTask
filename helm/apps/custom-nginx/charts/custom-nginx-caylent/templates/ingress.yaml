@@ -13,7 +13,7 @@ spec:
   rules:
   - http:
       paths:
-      - path: /
+      - path: /{{ .Values.service.path }}
         backend:
           serviceName: {{ include "mychart.fullname" . }}-svc
           servicePort: {{ .Values.service.port }}
