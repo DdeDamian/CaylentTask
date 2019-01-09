@@ -1,0 +1,14 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: ubuntu:18.04
+        environment:
+          TEST_VAR: test
+    steps:
+      - checkout
+      - run:
+          name: Update packages
+          command: |
+            apt update
+            apt upgrade -y
