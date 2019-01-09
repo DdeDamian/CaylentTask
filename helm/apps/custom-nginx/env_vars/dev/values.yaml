@@ -1,8 +1,9 @@
 replicaCount: 2
 
 image:
-  repository: nginxdemos/hello
-  tag: latest
+  # repository: nginxdemos/hello
+  repository: ddedamian/custom-nginx
+  tag: v2.0.0
   pullPolicy: IfNotPresent
 
 envvars:
