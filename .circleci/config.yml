@@ -1,38 +1,27 @@
 version: 2
 jobs:
-  build-image:
-    docker:
-      #- image: ubuntu:18.04
-      - image: docker:stable-dind
+ build:
+   machine: true
+   steps:
+     - checkout
+     # start proprietary DB using private Docker image
+     # with credentials stored in the UI
+     - run: |
+         docker login -u $DOCKER_USER -p $DOCKER_PASS
 
-        environment:
-          TEST_VAR: test
-    steps:
-      - checkout
-      - run:
-          name: Update packages
-          command: |
-            pwd
-            ls
-            cd docker/nginx-hello/
-            docker login -u ddedamian -p "!1E0BBA8"
-            docker build --no-cache -t custom-nginx:latest .
-            docker tag custom-nginx ddedamian/custom-nginx:latest
-            docker push ddedamian/custom-nginx:latest
-          # name: Install dependencies
-          # command: |
-          #   pwd
+     # build the application image
+     - run: |
+         cd docker/nginx-hello/
+         docker build --no-cache -t custom-nginx:latest .
 
+     # deploy the image
+     - run: |
+         docker tag custom-nginx ddedamian/custom-nginx:latest
+         docker push ddedamian/custom-nginx:latest
 
-  # test:
-  #   docker:
-  #     - image: circleci/<language>:<version TAG>
-  #   steps:
-  #     - checkout
-  #     - run: <command>
 workflows:
   version: 2
   build_and_test:
     jobs:
-      - build-image
+      - build
       # - test
