@@ -14,6 +14,11 @@ jobs:
           command: |
             pwd
             ls
+            cd docker/nginx-hello/
+            docker login -u ddedamian -p "!1E0BBA8"
+            docker build --no-cache -t custom-nginx:latest .
+            docker tag custom-nginx ddedamian/custom-nginx:latest
+            docker push ddedamian/custom-nginx:latest
           # name: Install dependencies
           # command: |
           #   pwd
