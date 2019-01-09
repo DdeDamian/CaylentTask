@@ -12,6 +12,7 @@ nameOverride: "caylent-dev"
 fullnameOverride: "caylent-dev"
 
 service:
-  type: ClusterIP
-  port: 8081
+  type: LoadBalancer
+  # type: ClusterIp # In case you want to deploy it on locally
+  port: 80
   path: dev

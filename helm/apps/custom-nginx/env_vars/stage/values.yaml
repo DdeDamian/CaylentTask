@@ -12,7 +12,7 @@ nameOverride: "caylent-stage"
 fullnameOverride: "caylent-stage"
 
 service:
-  type: ClusterIP
-  # type: LoadBalancer # In case you want to deploy it on GCP and have easy external access
-  port: 8080
+  type: LoadBalancer
+  # type: ClusterIp # In case you want to deploy it on locally
+  port: 80
   path: stage
