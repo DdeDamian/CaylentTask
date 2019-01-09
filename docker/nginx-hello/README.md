@@ -1,5 +1,7 @@
 
-# NGINX webserver that serves a simple page containing its hostname, IP address and port as wells as the request URI and the local time of the webserver.
+# NGINX webserver 
+
+NGINX webserver that serves a simple page containing its hostname, IP address and port as wells as the request URI and the local time of the webserver.
 
 And as a modification of the base image (nginx-hello), this also shows two environment variables, the environment we are working on and a secret stored using secrets.
 
