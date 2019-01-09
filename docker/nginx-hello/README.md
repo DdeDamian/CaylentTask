@@ -21,3 +21,11 @@ Request ID: 48ba0db334a6ed165e783469c2af868f
 ```
 
 The images were created to be used as simple backends for various load balancing demos.
+
+
+
+
+
+- modifique el entry point para que funcione el cron y le agergue el nginx para que no se rompa
+- agregue los 2 scripts uno para modifica el index y reflejar las variables, y el otro para entrypoint
+- 

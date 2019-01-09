@@ -7,7 +7,7 @@ image:
   pullPolicy: IfNotPresent
 
 envvars:
-  env: dev
+  env: development
 
 nameOverride: "caylent-dev"
 fullnameOverride: "caylent-dev"
