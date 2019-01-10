@@ -1,3 +1,4 @@
+[![CircleCI](https://circleci.com/gh/DdeDamian/CaylentTask.svg?style=svg)](https://circleci.com/gh/DdeDamian/CaylentTask)
 # Set up and tools used.
 
 As it was requested I created this repo to store all the content related to the resolution of the "Final Stage Interview Task"
