@@ -1,0 +1,14 @@
+version: 2
+jobs:
+  dummy_job:
+   machine: true
+   steps:
+     - checkout
+     - run: |
+         echo "nice!"
+
+workflows:
+  version: 2
+  dummy_work:
+    jobs:
+      - dummy_job
