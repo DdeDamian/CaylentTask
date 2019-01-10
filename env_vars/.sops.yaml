@@ -1,2 +1,2 @@
 creation_rules:
-  - pgp: '8287BD8E6494FD3A'
+  - gcp_kms: projects/artful-mystery-227923/locations/global/keyRings/test/cryptoKeys/quickstart
