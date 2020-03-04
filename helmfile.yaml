@@ -3,8 +3,8 @@ environments:
   dev:
 
 releases:
-- name: custom-nginx
-  namespace: caylent
+- name: custom-nginx-{{ .Environment.Name }}
+  namespace: caylent-{{ .Environment.Name }}
   chart: ./charts/custom-nginx-caylent
   values:
     - ./env_vars/{{ .Environment.Name }}/values.yaml

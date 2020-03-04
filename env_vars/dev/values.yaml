@@ -1,0 +1,18 @@
+replicaCount: 2
+
+image:
+  repository: ddedamian/custom-nginx
+  tag: v2.0.2
+  pullPolicy: IfNotPresent
+
+envvars:
+  env: development
+
+nameOverride: "caylent-dev"
+fullnameOverride: "caylent-dev"
+
+service:
+  type: LoadBalancer
+  # type: ClusterIp # In case you want to deploy it on locally
+  port: 80
+  path: dev

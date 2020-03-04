@@ -1,0 +1,2 @@
+creation_rules:
+  - gcp_kms: projects/damian-testing-228000/locations/global/keyRings/helm-keyring/cryptoKeys/helm-key
